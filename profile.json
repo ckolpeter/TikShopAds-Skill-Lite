@@ -1,0 +1,75 @@
+{
+  "slug": "tikshopads",
+  "name": "TikShopAds Skill Lite",
+  "platform": "tiktok_shop",
+  "market": "SG",
+  "currency": "SGD",
+  "focus": "TikTok Shop Product／LIVE GMV Max 商品規劃與混合歸因診斷",
+  "english": "Offline TikTok Shop Product/LIVE GMV Max planning with blended-attribution safeguards.",
+  "modes": [
+    "product_gmv_max",
+    "live_gmv_max"
+  ],
+  "workflows": {
+    "product_gmv_max": [
+      "確認銷售站點、Shop 與 GMV Max 功能",
+      "檢查商品頁、庫存、佣金與訂單成本",
+      "盤點商品卡及可合法使用的素材；不假設影片最低數量",
+      "輸出目標 ROI／預算情境",
+      "用混合自然與付費成交口徑閱讀報表"
+    ],
+    "live_gmv_max": [
+      "确认 Shop／直播及 LIVE GMV Max 可用",
+      "確認直播準備、貨量及素材使用權",
+      "準備直播商品順序與人工檢查清單",
+      "以直播間總 GMV／廣告費解讀回報，不等同純廣告增量"
+    ]
+  },
+  "budget_scope": {
+    "product_gmv_max": "product_campaign_accounting_only",
+    "live_gmv_max": "live_campaign_accounting_only_not_per_sku_budget_settings"
+  },
+  "notes": [
+    "This Skill is for TikTok Shop commerce, not TikAds video-script planning.",
+    "GMV Max metrics may combine paid and organic orders/revenue. This v1 refuses paid-only labeling and withholds click-order rate.",
+    "Reported ROI is a revenue/spend ratio, not accounting ROI or incremental advertising lift.",
+    "An unconfirmed creator/music permission is a use restriction, not a request to supply authorization codes."
+  ],
+  "checklist": [
+    "Shop 功能與廣告功能分開確認",
+    "affiliate 佣金與優惠分攤不可漏算",
+    "素材使用權僅記 true／false／null，不保存碼",
+    "LIVE 模式須確認 live_ready",
+    "不要僅依素材 ROI 較低就刪掉素材"
+  ],
+  "sources": [
+    {
+      "id": "TKS-1",
+      "title": "Measuring Product GMV Max quality",
+      "url": "https://ads.tiktok.com/resources/help/article/tips-to-measure-product-and-video-quality-in-your-product-gmv-max-campaign",
+      "checked_on": "2026-10-05",
+      "scope": "GMV Max",
+      "summary": "Product metrics include paid and organic traffic; ROI alone does not identify video ad effectiveness."
+    },
+    {
+      "id": "TKS-2",
+      "title": "About LIVE GMV Max",
+      "url": "https://ads.tiktok.com/resources/help/article/about-live-gmv-max?lang=en",
+      "checked_on": "2026-10-05",
+      "scope": "LIVE GMV Max",
+      "summary": "LIVE ROI uses total live-room GMV and ad spending."
+    },
+    {
+      "id": "TKS-3",
+      "title": "GMV Max overview",
+      "url": "https://ads.tiktok.com/business/nl-NL/blog/gmv-max-automate-shop-roi",
+      "checked_on": "2026-10-05",
+      "scope": "TikTok Shop; account/site dependent",
+      "summary": "Creative sources can include organic, paid and affiliate content; no creative minimum is assumed."
+    }
+  ],
+  "skill_id": "tikshopads-skill-lite",
+  "repo": "ckolpeter/TikShopAds-Skill-Lite",
+  "version": "1.0.0",
+  "source_policy": "2026-10-05 research snapshot; no live capability assertion; refresh manually before operating."
+}

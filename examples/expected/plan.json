@@ -1,0 +1,177 @@
+{
+  "contract_name": "tikshopads.plan",
+  "contract_version": "1.0",
+  "producer_version": "1.0.0",
+  "kind": "plan",
+  "local_id": "local-4627347599660edb",
+  "status": "PLAN_READY",
+  "review": "HUMAN_REVIEW_REQUIRED",
+  "publish_authorized": false,
+  "external_reads": false,
+  "external_writes": false,
+  "generation_mode": "deterministic",
+  "input": {
+    "platform": "tiktok_shop",
+    "market": "SG",
+    "currency": "SGD",
+    "source": {
+      "kind": "synthetic",
+      "note": "All products, money, permissions and results are fictional test data."
+    },
+    "money_decimals": 2,
+    "campaign": {
+      "mode": "product_gmv_max",
+      "days": 14,
+      "budget": "1400",
+      "account_ready": true,
+      "feature_confirmed": true,
+      "target_return": null,
+      "ad_rate": null
+    },
+    "products": [
+      {
+        "sku": "demo-cup",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "stock": 30,
+        "listing_ready": true,
+        "advertising_eligible": true,
+        "buy_box": null,
+        "order_revenue": "100",
+        "order_costs": {
+          "cogs": "35",
+          "platform_fees": "8",
+          "fulfilment": "10",
+          "other": "2"
+        },
+        "target_profit": "10",
+        "expected_cvr": "0.05",
+        "fee_base_per_order": null,
+        "terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ]
+      },
+      {
+        "sku": "demo-hold",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "stock": 0,
+        "listing_ready": true,
+        "advertising_eligible": true,
+        "buy_box": null,
+        "order_revenue": "100",
+        "order_costs": {
+          "cogs": "35",
+          "platform_fees": "8",
+          "fulfilment": "10",
+          "other": "2"
+        },
+        "target_profit": "10",
+        "expected_cvr": "0.05",
+        "fee_base_per_order": null,
+        "terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ]
+      }
+    ],
+    "assets": {
+      "rights_confirmed": null,
+      "live_ready": null
+    }
+  },
+  "result": {
+    "platform_workflow": [
+      "確認銷售站點、Shop 與 GMV Max 功能",
+      "檢查商品頁、庫存、佣金與訂單成本",
+      "盤點商品卡及可合法使用的素材；不假設影片最低數量",
+      "輸出目標 ROI／預算情境",
+      "用混合自然與付費成交口徑閱讀報表"
+    ],
+    "products": [
+      {
+        "sku": "demo-cup",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "readiness": "PILOT_CANDIDATE",
+        "blocked_by": [],
+        "missing": [],
+        "economics": {
+          "status": "SCENARIO_ONLY",
+          "non_ad_contribution_per_order": "45.000000",
+          "break_even_cpa": "45.000000",
+          "break_even_roas_on_net_revenue": "2.222222",
+          "target_ad_allowance_per_order": "35.000000",
+          "target_roas_on_net_revenue": "2.857143",
+          "economic_cpc_ceiling": "1.750000"
+        },
+        "supplied_listing_terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ],
+        "research_status": "NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA"
+      },
+      {
+        "sku": "demo-hold",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "readiness": "BLOCKED",
+        "blocked_by": [
+          "out_of_stock"
+        ],
+        "missing": [],
+        "economics": {
+          "status": "SCENARIO_ONLY",
+          "non_ad_contribution_per_order": "45.000000",
+          "break_even_cpa": "45.000000",
+          "break_even_roas_on_net_revenue": "2.222222",
+          "target_ad_allowance_per_order": "35.000000",
+          "target_roas_on_net_revenue": "2.857143",
+          "economic_cpc_ceiling": "1.750000"
+        },
+        "supplied_listing_terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ],
+        "research_status": "NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA"
+      }
+    ],
+    "budget": {
+      "scope": "product_campaign_accounting_only",
+      "total_cap": "1400.000000",
+      "allocated_total": "1400.000000",
+      "reserve": "0.000000",
+      "allocation": [
+        {
+          "sku": "demo-cup",
+          "pilot_allowance": "1400.000000"
+        }
+      ],
+      "days": 14,
+      "daily_reference_not_live_budget": "100.000000"
+    },
+    "requested_target_return": null,
+    "target_return_validated_for_platform": false,
+    "checklist": [
+      "Shop 功能與廣告功能分開確認",
+      "affiliate 佣金與優惠分攤不可漏算",
+      "素材使用權僅記 true／false／null，不保存碼",
+      "LIVE 模式須確認 live_ready",
+      "不要僅依素材 ROI 較低就刪掉素材"
+    ],
+    "notes": [
+      "This Skill is for TikTok Shop commerce, not TikAds video-script planning.",
+      "GMV Max metrics may combine paid and organic orders/revenue. This v1 refuses paid-only labeling and withholds click-order rate.",
+      "Reported ROI is a revenue/spend ratio, not accounting ROI or incremental advertising lift.",
+      "An unconfirmed creator/music permission is a use restriction, not a request to supply authorization codes.",
+      "All allocations are equal-split pilot accounting scenarios, not optimized bids or live budgets.",
+      "Use net revenue and fully loaded non-ad costs from the same representative order. No platform fees are assumed.",
+      "Reported gross GMV / spend is not directly comparable with a net-revenue break-even threshold.",
+      "Capability confirmations are user assertions, not independently verified account eligibility.",
+      "Review stock, attribution maturity, rights, site rules and changes before taking any manual action.",
+      "CREATIVE_RIGHTS_UNCONFIRMED: do not use unlicensed creator or music assets; no minimum video count is assumed."
+    ],
+    "source_refs": [
+      "TKS-1",
+      "TKS-2",
+      "TKS-3"
+    ]
+  }
+}
